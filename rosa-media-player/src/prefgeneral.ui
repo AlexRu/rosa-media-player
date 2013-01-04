@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PrefGeneral</class>
+ <widget class="QWidget" name="PrefGeneral">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>443</width>
+    <height>560</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="general_tab">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>Media settings</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="5" column="0">
+          <widget class="QCheckBox" name="autosync_check">
+           <property name="text">
+            <string>Audio/video auto &amp;synchronization</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QCheckBox" name="remember_all_check">
+           <property name="text">
+            <string>&amp;Remember settings for all files (audio track, subtitles...)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QCheckBox" name="close_on_finish_check">
+           <property name="text">
+            <string>&amp;Close when finished playback</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QCheckBox" name="pause_if_hidden_check">
+           <property name="text">
+            <string>&amp;Pause when minimized</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0">
+          <layout class="QHBoxLayout" name="_2">
+           <property name="spacing">
+            <number>6</number>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Cha&amp;nnels by default:</string>
+             </property>
+             <property name="buddy">
+              <cstring>channels_combo</cstring>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="channels_combo"/>
+           </item>
+           <item>
+            <spacer>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item row="3" column="0">
+          <widget class="QCheckBox" name="auto_add_to_playlist_check">
+           <property name="text">
+            <string>&amp;Automatically add files to playlist</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QCheckBox" name="screensaver_check">
+           <property name="text">
+            <string>&amp;Disable screensaver</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QCheckBox" name="youtube_enabled">
+           <property name="text">
+            <string>YouTube support (experimental)</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="title">
+         <string>Main window</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>A&amp;utoresize:</string>
+             </property>
+             <property name="buddy">
+              <cstring>mainwindow_resize_combo</cstring>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="mainwindow_resize_combo">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <item>
+              <property name="text">
+               <string>Never</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Whenever it's needed</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Only after loading a new video</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <spacer>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <widget class="QCheckBox" name="save_size_check">
+           <property name="text">
+            <string>R&amp;emember position and size</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_5">
+        <property name="title">
+         <string>Instances</string>
+        </property>
+        <layout class="QGridLayout" name="_7">
+         <property name="margin">
+          <number>9</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QCheckBox" name="single_instance_check">
+           <property name="text">
+            <string>&amp;Use only one running instance of ROSA Media Player</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="title">
+         <string>Audio</string>
+        </property>
+        <layout class="QGridLayout" name="_6">
+         <property name="margin">
+          <number>9</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QCheckBox" name="volnorm_check">
+           <property name="text">
+            <string>&amp;Volume normalization by default</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>140</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>remember_all_check</tabstop>
+  <tabstop>close_on_finish_check</tabstop>
+  <tabstop>pause_if_hidden_check</tabstop>
+  <tabstop>auto_add_to_playlist_check</tabstop>
+  <tabstop>screensaver_check</tabstop>
+  <tabstop>autosync_check</tabstop>
+  <tabstop>channels_combo</tabstop>
+  <tabstop>mainwindow_resize_combo</tabstop>
+  <tabstop>save_size_check</tabstop>
+  <tabstop>single_instance_check</tabstop>
+  <tabstop>volnorm_check</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

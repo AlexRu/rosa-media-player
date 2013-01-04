@@ -1,0 +1,63 @@
+This document explains how to compile and install rosa-media-player.
+
+Compiling rosa-media-player should be easy. It only depends on Qt. Since version 1.0
+it can only be compiled with Qt 4.2 or greater.
+
+
+1) How to make a rpm package
+2) Generic compilation
+3) Changing installation path
+
+
+1) How to make a rpm package
+----------------------------
+Run rpmbuild -tb rosa-media-player-1.5.x.tar.gz
+You'll find the rpm pachage under /usr/src/packages/RPMS/i586/
+
+
+2) Generic compilation
+----------------------
+You need at least Qt 4.2 to compile rosa-media-player. It won't work with an older
+version.
+
+Be sure you have installed the Qt 4 development package. Its name maybe
+qt4-devel, libqt4-dev or similar. 
+
+Uncompress the source code, open a console and enter in the 
+rosa-media-player-1.5.x directory.
+
+Type "make". 
+
+If everything is ok now you can install it with "make install".
+That will install rosa-media-player in /usr/local.
+
+If "make" fails, it's probably because the Qt 3 qmake has been used instead of
+the Qt 4 one. It seems that some distros have renamed that tool to qmake-qt4. 
+Others may have installed in another directory.
+Look at the contents of the qt4-devel package (or whatever its name is) and
+find out where it is.
+
+Now type something like this (just examples):
+make QMAKE=qmake-qt4
+or
+make QMAKE=/usr/share/qt4/bin/qmake
+
+
+3) Changing installation path
+-----------------------------
+By default rosa-media-player will be installed in /usr/local. You can change it by
+using PREFIX and DESTDIR.
+
+Examples:
+make PREFIX=/usr
+make PREFIX=/usr install
+
+That would install rosa-media-player under /usr.
+
+DESTDIR will be useful for package maintainers.
+
+make PREFIX=/usr
+make PREFIX=/usr DESTDIR=/tmp/ install
+
+That would compile rosa-media-player for /usr but in fact it will be installed in
+/tmp/usr/
